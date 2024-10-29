@@ -1,4 +1,4 @@
-# This Takes a word as input and calculates the number of possible permutations.
+# This App Takes a word as input and calculates the number of possible permutations.
 
 import itertools
 
