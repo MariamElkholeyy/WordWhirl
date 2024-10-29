@@ -1,10 +1,15 @@
 # This App Takes a word as input and calculates the number of possible permutations.
 
-import itertools
+from collections import Counter
+import math
 
 def word_shuffler(word):
-    permutations = itertools.permutations(word)
-    num_permutations = len(list(permutations))
+    letter_counts = Counter(word)
+    num_permutations = math.factorial(len(word))
+    
+    for count in letter_counts.values():
+        num_permutations //= math.factorial(count)
+    
     return num_permutations
 
 if __name__ == "__main__":
